@@ -1,20 +1,19 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { IBlog } from '../utils/interfaces';
-import BlogPreview from '../components/BlogPreview';
+import {IItem} from '../utils/interfaces';
 import { json } from '../utils/api';
 
 export interface HomeProps { }
 
 const Home: React.SFC<HomeProps> = () => {
 
-    const [blogs, setBlogs] = useState<IBlog[]>([]);
+    const [items, setItems] = useState<IItem[]>([]);
 
     useEffect(() => {
         (async () => {
             try {
-                let blogs = await json('/api/blogs');
-                setBlogs(blogs);
+                let items = await json('/api/items');
+                setItems(items);
             } catch (error) {
                 console.log(error);
             }
@@ -24,12 +23,14 @@ const Home: React.SFC<HomeProps> = () => {
     return (
         <>
             <div>
-                <h2 className="row m-4 justify-content-center text-secondary">Blog Feed</h2>
+                <h2 className="row m-4 justify-items-center text-secondary">Examples of My Work</h2>
             </div>
             <main className="col">
-                <section className="row my-5 justify-content-center">
-                    {blogs.map(blog => (
-                        <BlogPreview key={`blog-${blog.id}`} blog={blog} />
+                <section className="row my-5 justify-items-center">
+                    {items.map(item => (
+                        <div>
+                            <h1>Home</h1>
+                        </div>
                     ))}
                 </section>
             </main>

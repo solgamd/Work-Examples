@@ -3,7 +3,7 @@ import '../scss/app.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
-// import Details from '../views/Details';
+import Details from './Pages/Details';
 // import NewPost from '../views/NewPost';
 // import Edit from '../views/Edit';
 // import Login from '../views/Login';
@@ -27,8 +27,8 @@ class App extends React.Component<IAppProps> {
                 <main className="container">
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        {/* <Route exact path="/:id/details" component={Details} />
-                        <Route exact path="/new" component={NewPost} />
+                        <Route exact path="/:id/details" component={Details} />
+                        {/* <Route exact path="/new" component={NewPost} />
                         <Route exact path="/:id/edit" component={Edit} />
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/admin" component={Admin} />

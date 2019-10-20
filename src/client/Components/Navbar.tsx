@@ -9,7 +9,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
     return (
         <nav className="navbar navbar-expand-sm navbar-secondary bg-success d-flex">
-            <a className="navbar-brand mr-auto text-secondary" href="/">MY BLOG</a>
+            <a className="navbar-brand mr-auto text-secondary" href="/">MY WORK</a>
             <div>
                 <div className="collapse navbar-collapse d-flex flex-row">
                 </div>
@@ -17,9 +17,9 @@ const Navbar: React.FC<NavbarProps> = () => {
 
                     <NavLink exact to="/"
                         className="nav-item nav-link mx-2 text-secondary"
-                        activeClassName="nav-item nav-link active text-alert">Blog Feed</NavLink>
+                        activeClassName="nav-item nav-link active text-alert">Home</NavLink>
 
-                    <NavLink exact to="/admin"
+                    {/* <NavLink exact to="/admin"
                         className="nav-item nav-link mx-2  text-secondary"
                         activeClassName="nav-item nav-link active text-alert">Edit Blogs</NavLink>
 
@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
                     <NavLink exact to="/contact"
                         className="nav-item nav-link mx-2  text-secondary"
-                        activeClassName="nav-item nav-link active text-alert">Contact</NavLink>
+                        activeClassName="nav-item nav-link active text-alert">Contact</NavLink> */}
                 </div>
             </div>
         </nav>
