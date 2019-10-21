@@ -1,5 +1,26 @@
 $theme-colors: (
-    'primary': #0091ea //Covalence Blue!  :D
+    'primary': #5A7D7C, 
+    'secondary': #590004,
+    'success': #59C3C3,
+    'warning': #FCBA04,
+    'alert': #FFFFFF
 );
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+    // background-image: url("/images/topography.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: lightgrey;
+    background-blend-mode: overlay;
+}
+.nav-link {
+    justify-content: end
+}
+
+.card-img-top {
+    display: block;
+}

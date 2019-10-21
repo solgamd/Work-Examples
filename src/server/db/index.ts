@@ -15,18 +15,8 @@ export const knextion = knex(config.knex);
 //     });
 // };
 
-import Blogs from './queries/blogs';
-import Users from './queries/users';
-import Tokens from './queries/tokens';
-import blogs from './queries/blogs';
-import blogtags from './queries/blogtags';
-import tags from './queries/tags';
+import items from './queries/items';
 
 export default {
-    Blogs,
-    Users,
-    Tokens,
-    blogs,
-    blogtags,
-    tags
+    items
 }

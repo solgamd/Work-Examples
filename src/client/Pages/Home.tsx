@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import {IItem} from '../utils/interfaces';
 import { json } from '../utils/api';
+import ItemPreview from '../Components/ItemPreview';
 
 export interface HomeProps { }
 
@@ -26,10 +27,10 @@ const Home: React.SFC<HomeProps> = () => {
                 <h2 className="row m-4 justify-items-center text-secondary">Examples of My Work</h2>
             </div>
             <main className="col">
-                <section className="row my-5 justify-items-center">
+                <section className="row my-3 justify-items-center">
                     {items.map(item => (
-                        <div>
-                            <h1>Home</h1>
+                        <div key={item.id}>
+                           <ItemPreview item={item}/>
                         </div>
                     ))}
                 </section>

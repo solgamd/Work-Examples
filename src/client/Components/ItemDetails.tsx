@@ -10,8 +10,8 @@ export interface ItemDetailsProps {
 const ItemDetails: React.SFC<ItemDetailsProps> = ({ item, tags }) => {
     return (
         <div className="card mb-3 shadow" >
-            <div className="card-img-top mx-auto" style={{ maxWidth: '542px' }}>
-                <img src="/images/airport-woman-det.jpg" className="card-img-top" style={{ maxWidth: '542px', maxHeight: '200px' }} alt="blog-image" />
+            <div className="card-img-top mx-auto" style={{ maxWidth: '300px' }}>
+                <img src="/images/airport-woman-det.jpg" className="card-img-top" style={{ maxWidth: '300px', maxHeight: '200px' }} alt="blog-image" />
                 <div className="col">
                     <div className="card-body">
                         <h4 className="card-title">{item.title}</h4>

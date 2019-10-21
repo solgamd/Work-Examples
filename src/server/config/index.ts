@@ -6,7 +6,7 @@ export default {
         user: 'root',
         password: 'null',
         host: 'localhost',
-        database: 'authlab'
+        database: 'work_examples'
         }
     },
 
