@@ -1,20 +1,56 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { IItem } from '../utils/interfaces';
 import { Link } from 'react-router-dom';
+import '../../../public/images/cheers.jpg';
+import { useEffect } from 'react';
+import { json } from '../utils/api';
 
 export interface ItemPreviewProps {
     item: IItem
 }
 
-const ItemPreview: React.SFC<ItemPreviewProps> = ({ item }) => { 
+export interface ItemPreviewState {
+    item: IItem[]
+}
+
+const imageArray = [
+    { image1: '../../../public/images/cheers.jpg' },
+    { image2: '../../../public/images/jpg-75-summer-ole.jpg' }
+]
+
+const ItemPreview: React.SFC<ItemPreviewProps> = ({ item } ) => {
+
+    const [image, setImage] = useState<IItem[]>([
+        {
+            id: 0,
+            title: '',
+            descrip: '',
+            company: '',
+            source: '',
+            _created: new Date()
+        }
+    ]);
+
+    useEffect(() => {
+        (async () => {
+            try {
+                let result = await json('/api/items');
+                setImage(result)
+            } catch (error) {
+                console.log(error)
+            }
+        })()
+    }, []);
+
     return (
         <div>
             <div className="card m-3 mt-8 shadow">
-                <div className="row no-gutters" style={{ maxWidth: '540px' }}>
+                <div className="row no-gutters" style={{ maxWidth: '300px' }}>
                     <div className="col-md-4">
-                        <img 
-                        src="https://work-examples-mds.s3.us-east-2.amazonaws.com/Marketing+Content/JPG+75+Summer+OLE.jpg" 
-                        className="card-img" alt="item-image" />
+                        <img
+                            src={image[0].source}
+                            className="card-img" alt="item-image" />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">

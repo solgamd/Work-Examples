@@ -14,7 +14,7 @@ const Details: React.SFC<DetailsProps> = props => {
         title: '',
         descrip: '',
         company: '',
-        assignment: '',
+        source: '',
         _created: new Date(),
         // name: ''
     });
