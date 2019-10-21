@@ -5,9 +5,9 @@ const getAll = () => knex('items').select();
 
 const getOneItem = (id: number) => knex('items').select().where({ id });
 
-const post = (obj: { title: string, descrip: string, company: string, assignment: string }) => knex('items').insert(obj);
+const post = (obj: { title: string, descrip: string, company: string, source: string }) => knex('items').insert(obj);
 
-const edit = (obj: { title?: string, descrip?: string, company?: string, assginment?: string }, id: number) => knex('items').update(obj).where({ id });
+const edit = (obj: { title?: string, descrip?: string, company?: string, source?: string }, id: number) => knex('items').update(obj).where({ id });
 
 const remove = (id: number) => knex('items').delete().where({ id });
 

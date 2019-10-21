@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
         title: req.body.title,
         descrip: req.body.descrip,
         company: req.body.company,
-        assignment: req.body.assignment
+        source: req.body.assignment
     }
     let [result] = await db.items.post(newItem);
 

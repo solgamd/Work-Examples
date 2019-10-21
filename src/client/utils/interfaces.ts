@@ -4,7 +4,7 @@ export interface IItem{
     title: string,
     descrip: string,
     company: string,
-    assignment: string,
+    source: string,
     _created: Date
 }
 
